@@ -17,6 +17,8 @@ const slides = [
 	}
 ]
 
+// Create dots
+
 let activeIndex = 0;
 
 function createDot() {
@@ -31,6 +33,8 @@ if (i === 0) {
 }};
 
 
+// Update dots
+
 function updateDot() {
 	const dots = document.querySelectorAll('.dot');
 
@@ -42,6 +46,8 @@ function updateDot() {
     }
   });
 }
+
+// Display a slide
 
 function displaySlide(index) {
 
@@ -61,6 +67,8 @@ function displaySlide(index) {
 };
 
 createDot();
+
+// Event Listeners
 
   document.getElementById('arrow_left').addEventListener('click', () => {
 	activeIndex--;
