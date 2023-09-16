@@ -30,13 +30,12 @@ if (i === 0) {
   }
 }};
 
-createDot(slides);
 
-function updateDot(activeIndex) {
+function updateDot() {
 	const dots = document.querySelectorAll('.dot');
 
-	dots.forEach((dot, i) => {
-    if (i === activeIndex) {
+	dots.forEach((dot, index) => {
+    if (index === activeIndex) {
       dot.classList.add('dot_selected');
     } else {
       dot.classList.remove('dot_selected');
@@ -60,6 +59,8 @@ function displaySlide(index) {
 	tagLine.innerHTML = slide.tagLine;
 	updateDot(activeIndex);
 };
+
+createDot();
 
   document.getElementById('arrow_left').addEventListener('click', () => {
 	activeIndex--;
